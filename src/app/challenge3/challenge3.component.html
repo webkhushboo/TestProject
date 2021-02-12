@@ -7,48 +7,56 @@
         <mat-card-subtitle>32 minutes ago</mat-card-subtitle>
         <mat-icon class="more">more_vert</mat-icon>
       </mat-card-header>
-      <p>Remember the place we were talking about the other night? Found it!</p>
-      <img src="../../assets/3.jfif" alt="">
-      <div fxLayout="row">
-        <div fxFlex="15%">
-          <button mat-icon-button class="icon favorite-icon" aria-label="icon-button with heart icon">
-            <span>
-              <mat-icon>favorite</mat-icon> LIKE (5)
-            </span>
-          </button>
-        </div>
-        <div fxFlex="15%">
-          <button mat-icon-button class="icon" aria-label="icon-button with share icon">
-            <span>
-              <mat-icon>share</mat-icon> SHARE (21)
-            </span>
-          </button>
-        </div>
-      </div>
+
       <mat-card-content>
-        <span>1 Comment <mat-icon>expand_more</mat-icon></span>
-        <div fxLayout="row">
-          <div fxFlex="10%">
-            <div mat-card-avatar class="header-image"></div>
+        <div fxLayout="column" class="padding-16">
+          <p>Remember the place we were talking about the other night? Found it!</p>
+          <img src="../../assets/3.jfif" alt="">
+        </div>
+        <div fxLayout="row" class="padding-16">
+          <div fxFlex="15%" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+              <mat-icon>favorite</mat-icon>
+            </div>
+            <div>LIKE (5) </div>
           </div>
-          <div fxFlex="90%" fxLayout="column">
-            <span class="name">Alice Freemom</span>
-            <span>june 10 2018</span>
-            <p>Remember the place we were talking about the other night? Found it! Remember the place we were talking
-              about the other night? Found it!
-            </p>
-            <span class="reply">reply</span>
+          <div fxFlex="20%" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+              <mat-icon>share</mat-icon>
+            </div>
+            <div>SHARE (21)</div>
           </div>
         </div>
-        <div fxLayout="row">
-          <div fxFlex="10%">
-            <div mat-card-avatar class="avtar"></div>
+        <div class="content">
+          <div class="row" fxLayoutAlign="Start center">
+            <div>1 Comment</div>
+            <div>
+              <mat-icon>expand_more</mat-icon>
+            </div>
           </div>
-          <div fxFlex="90%" fxLayout="column">
-            <mat-form-field appearance="outline">
-              <textarea matInput placeholder="add a comment"></textarea>
-            </mat-form-field>
-            <button mat-raised-button color="primary" class="button">Post Comment</button>
+          <div fxLayout="row">
+            <div fxFlex="10%">
+              <div mat-card-avatar class="header-image"></div>
+            </div>
+            <div fxFlex="90%" fxLayout="column">
+              <div class="name">Alice Freemom</div>
+              <div>june 10 2018</div>
+              <p>Remember the place we were talking about the other night? Found it! Remember the place we were talking
+                about the other night? Found it!
+              </p>
+              <div class="reply">Reply</div>
+            </div>
+          </div>
+          <div fxLayout="row" class="footer">
+            <div fxFlex="10%">
+              <div mat-card-avatar class="avtar"></div>
+            </div>
+            <div fxFlex="90%" fxLayout="column">
+              <mat-form-field appearance="outline" class="comment">
+                <textarea matInput placeholder="Add a comment"></textarea>
+              </mat-form-field>
+              <button mat-raised-button color="primary" class="button">Post Comment</button>
+            </div>
           </div>
         </div>
       </mat-card-content>

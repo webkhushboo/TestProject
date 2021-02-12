@@ -44,3 +44,13 @@
 .button {
   margin-top: 30px;
 }
+.footer {
+  margin-top: 50px;
+}
+.card:hover {
+  transform: scale(1.2);
+  z-index: 9999;
+}
+.main {
+  background-color: #e0dede;
+}
