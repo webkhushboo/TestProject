@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="center center" class="main">
   <div fxFlex="40%">
-    <mat-card class="card">
+    <mat-card class="card" (click)='toggle()' [ngClass]="{'active': isToggle}">
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
         <mat-card-title>Garry Newmon Posted on your Timeline</mat-card-title>

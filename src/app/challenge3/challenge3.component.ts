@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./challenge3.component.scss']
 })
 export class Challenge3Component implements OnInit {
+  isToggle: boolean = false;
 
   /**
    * Life cycle method
@@ -15,6 +16,13 @@ export class Challenge3Component implements OnInit {
    * Life cycle init method
    */
   ngOnInit(): void {
+  }
+ 
+  /**
+   * Active the card
+   */
+  toggle() {
+    this.isToggle = !this.isToggle;
   }
 
 }
