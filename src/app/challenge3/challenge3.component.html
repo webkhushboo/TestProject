@@ -1,0 +1,57 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="main">
+  <div fxFlex="40%">
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title>Garry Newmon Posted on your Timeline</mat-card-title>
+        <mat-card-subtitle>32 minutes ago</mat-card-subtitle>
+        <mat-icon class="more">more_vert</mat-icon>
+      </mat-card-header>
+      <p>Remember the place we were talking about the other night? Found it!</p>
+      <img src="../../assets/3.jfif" alt="">
+      <div fxLayout="row">
+        <div fxFlex="15%">
+          <button mat-icon-button class="icon favorite-icon" aria-label="icon-button with heart icon">
+            <span>
+              <mat-icon>favorite</mat-icon> LIKE (5)
+            </span>
+          </button>
+        </div>
+        <div fxFlex="15%">
+          <button mat-icon-button class="icon" aria-label="icon-button with share icon">
+            <span>
+              <mat-icon>share</mat-icon> SHARE (21)
+            </span>
+          </button>
+        </div>
+      </div>
+      <mat-card-content>
+        <span>1 Comment <mat-icon>expand_more</mat-icon></span>
+        <div fxLayout="row">
+          <div fxFlex="10%">
+            <div mat-card-avatar class="header-image"></div>
+          </div>
+          <div fxFlex="90%" fxLayout="column">
+            <span class="name">Alice Freemom</span>
+            <span>june 10 2018</span>
+            <p>Remember the place we were talking about the other night? Found it! Remember the place we were talking
+              about the other night? Found it!
+            </p>
+            <span class="reply">reply</span>
+          </div>
+        </div>
+        <div fxLayout="row">
+          <div fxFlex="10%">
+            <div mat-card-avatar class="avtar"></div>
+          </div>
+          <div fxFlex="90%" fxLayout="column">
+            <mat-form-field appearance="outline">
+              <textarea matInput placeholder="add a comment"></textarea>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="button">Post Comment</button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

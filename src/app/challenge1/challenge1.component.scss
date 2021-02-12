@@ -1,0 +1,29 @@
+.locations {
+  background-color: #f7f7f7;
+  .card {
+    width: 85%;
+    margin: 12px;
+    .header-image {
+      background-image: url("../../assets/download.jfif");
+      background-size: cover;
+    }
+    .mat-card-image:first-child {
+      height: 268px;
+    }
+    p {
+      font-family: initial;
+    }
+    h2 {
+      font-family: revert;
+    }
+    h4 {
+      margin-top: -15px;
+    }
+    .more {
+        float: right;
+    }
+    .icon {
+      float: right;
+    }
+  }
+}
