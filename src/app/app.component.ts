@@ -6,10 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test-project';
-  challange =1;
+  title = 'Test Project';
+  challenge = 1;
 
-  clickOnChallange(value) {
-    this.challange = value;
+  /**
+   * Show challenge based upon click button
+   * @param value Value assigned
+   */
+  clickOnChallenge(value): void {
+    this.challenge = value;
   }
 }
