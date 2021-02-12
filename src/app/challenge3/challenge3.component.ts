@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-challenge3',
   templateUrl: './challenge3.component.html',
@@ -7,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Challenge3Component implements OnInit {
 
+  /**
+   * Life cycle method
+   */
   constructor() { }
 
+  /**
+   * Life cycle init method
+   */
   ngOnInit(): void {
   }
 

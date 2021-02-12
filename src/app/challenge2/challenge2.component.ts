@@ -7,12 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Challenge2Component implements OnInit {
 
+  /**
+   * Life cycle method
+   */
   constructor() { }
 
+  /**
+   * Life cycle init method
+   */
   ngOnInit(): void {
   }
 
-  success() {
-    alert("the buy is success")
+  /**
+   * Show alert on click of buy button
+   */
+  success(): void {
+    alert('The buy is success');
   }
 }
