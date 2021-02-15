@@ -12,9 +12,14 @@
   <mat-card-actions>
     <div fxLayout="row" class="card-action">
       <div fxFlex="100%" fxLayoutAlign="end end">
-        <button mat-button>
-          <mat-icon>shopping_cart</mat-icon>
-          Add to cart
+        <button mat-button (click)='addToCart()' *ngIf='!cartItems.includes(product.id)'>
+          <mat-icon>add_shopping_cart</mat-icon>
+          <span> Add to Cart </span>
+        </button>
+        <button mat-button (click)='removeFromCart()' *ngIf='cartItems.includes(product.id)'>
+          <mat-icon class="addedtocart">shopping_cart</mat-icon>
+          <span *ngIf='!cartItems.includes(product.id)'> Add to Cart </span>
+          <span class="addedtocart"> Added to Cart </span>
         </button>
       </div>
     </div>

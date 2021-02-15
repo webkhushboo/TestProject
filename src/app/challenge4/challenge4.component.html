@@ -16,7 +16,8 @@
     </div>
     <div fxLayout="row wrap" fxLayoutGap="10px">
       <div fxFlex="30%" *ngFor='let item of cardArray'>
-        <app-product-card [product]='item'></app-product-card>
+        <app-product-card [product]='item' (addToCartClick)='addToCart($event)'
+                          (removeFromCartClick)='removeCart($event)'></app-product-card>
       </div>
     </div>
     <div fxLayout="row">
@@ -26,16 +27,24 @@
         <mat-divider></mat-divider>
       </div>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-between end">
+    <div fxLayout='row' *ngFor="let cart of carts" fxLayoutAlign='space-between center'>
+      <div fxFlex="80%">
+        <p class="addedcart"> {{cart.header}}</p>
+      </div>
+      <div fxFlex="20%">
+        <p class="addedcart"> {{cart.price}}</p>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
       <div fxFlex="80%">
         <h4>Total</h4>
       </div>
       <div fxFlex="20%">
-        <p>0</p>
+        <p>{{totalSum}}</p>
       </div>
     </div>
     <div fxLayout="column">
-      <button mat-raised-button color="primary">Buy</button>
+      <button mat-raised-button color="primary" (click)='buyItems()'>Buy</button>
     </div>
   </div>
 </div>
