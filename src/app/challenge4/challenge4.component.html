@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="70%" fxLayout="column" fxLayoutGap="2%">
+    <div fxLayout="row">
+      <div fxFlex="100%" fxLayoutAlign="center center">
+        <h1>[NPC] Beginner Merchant</h1>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <p>Hello Adventurer, welcome to the town of Angular!</p>
+        <p>Here you can explore all the exciting stuff like meeting weird monster, learning new spell, and discovering
+          rare item.</p>
+        <p>But first, you need some weapon/spell to accompany you along the way!</p>
+        <p>I will give you 1000 gold, so choose your weapon/spell wisely~</p>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutGap="10px">
+      <div fxFlex="30%" *ngFor='let item of cardArray'>
+        <app-product-card [product]='item'></app-product-card>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <mat-divider></mat-divider>
+        <h3>Added to cart</h3>
+        <mat-divider></mat-divider>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between end">
+      <div fxFlex="80%">
+        <h4>Total</h4>
+      </div>
+      <div fxFlex="20%">
+        <p>0</p>
+      </div>
+    </div>
+    <div fxLayout="column">
+      <button mat-raised-button color="primary">Buy</button>
+    </div>
+  </div>
+</div>

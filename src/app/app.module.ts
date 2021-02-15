@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ExploreDialogComponent } from './explore-dialog/explore-dialog.component';
 import { Challenge2Component } from './challenge2/challenge2.component';
 import { Challenge3Component } from './challenge3/challenge3.component';
+import { Challenge4Component } from './challenge4/challenge4.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { Challenge3Component } from './challenge3/challenge3.component';
     Challenge1Component,
     ExploreDialogComponent,
     Challenge2Component,
-    Challenge3Component
+    Challenge3Component,
+    Challenge4Component,
+    ProductCardComponent
   ],
   imports: [
     AppMaterialModule,
