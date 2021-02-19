@@ -41,7 +41,7 @@
               </div>
               <div fxFlex="22%">
                 <mat-form-field class="full-width">
-                  <input matInput formControlName="price" required>
+                  <input matInput formControlName="price" type="number" required>
                   <span matPrefix>$&nbsp;</span>
                   <mat-error *ngIf="newOrderArr.controls[i].get('price').invalid">required this field</mat-error>
                 </mat-form-field>

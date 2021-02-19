@@ -25,17 +25,6 @@ export class ShopCardComponent implements OnInit {
 
   totalPrice: number = 0;
 
-  orders: Section[] = [
-    {
-      name: 'CPU',
-      updated: 'AMD Ryzen 5 2600 · $117',
-    },
-    {
-      name: 'Motherboard',
-      updated: 'MSI PRO Z390-A · $129',
-    },
-  ];
-
   /**
    *  Life circle Method
    */

@@ -54,13 +54,29 @@ export class Challenge6Component implements OnInit {
         newOrderArr: [
           {
             price: 246,
-            item: 'AMD Ryzen 5 2600 · $117',
+            item: 'AMD Ryzen 5 2600',
             category: 'CPU',
           },
           {
             price: 2,
-            item: 'MSI PRO Z390-A · $129',
+            item: 'MSI PRO Z390-A',
             category: 'Motherboard',
+          },
+        ],
+      },
+      {
+        customerName: 'Filthy Frank',
+        email:'georgemiller@gmail.com',
+        newOrderArr: [
+          {
+            price: 306,
+            category: 'Video Card',
+            item: 'ZOTAC GeForce GTX 1060',
+          },
+          {
+            price: 2,
+            category: 'Memory',
+            item: 'CORSAIR Vengeance RGB Pro 16GB',
           },
         ],
       },
