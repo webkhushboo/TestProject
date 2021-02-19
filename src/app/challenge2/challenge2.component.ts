@@ -1,5 +1,9 @@
+// Core module
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Challenge2 component
+ */
 @Component({
   selector: 'app-challenge2',
   templateUrl: './challenge2.component.html',
@@ -15,8 +19,7 @@ export class Challenge2Component implements OnInit {
   /**
    * Life cycle init method
    */
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   /**
    * Show alert on click of buy button

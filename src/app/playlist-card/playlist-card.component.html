@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>{{playlist.title}}</mat-card-title>
+    <mat-card-subtitle>total {{playlist.songsArr.length}} songs, {{totalDuration}} minutes</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <p>{{playlist.description}}</p>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <mat-list>
+          <mat-list-item *ngFor="let song of playlist.songsArr">
+            <mat-icon mat-list-icon>music_note</mat-icon>
+            <div mat-line> By {{song.songTitle}}</div>
+            <div mat-line> {{song.artist}}, {{song.duration}} mins </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)='deletePlaylistClick()' color="warn">Delete</button>
+    <button mat-button (click)='editPlaylistClick()'>Edit</button>
+  </mat-card-actions>
+</mat-card>

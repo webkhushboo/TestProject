@@ -1,0 +1,64 @@
+<div fxLayout="row">
+  <div fxFlex="100%">
+    <h2 mat-dialog-title>{{this.data ? 'Edit' : 'Create New'}} Order</h2>
+    <mat-dialog-content class="mat-typography">
+      <form [formGroup]="newOrderForm">
+        <div fxLayout="row wrap" fxLayoutGap="10px">
+          <div fxFlex="100%">
+            <mat-form-field class="full-width">
+              <mat-label>Customer Name</mat-label>
+              <input matInput formControlName="customerName" required>
+              <mat-error *ngIf="customerName.invalid">required this field</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxFlex="100%">
+            <mat-form-field class="full-width">
+              <mat-label>Email</mat-label>
+              <input matInput type="email" formControlName="email" required>
+              <mat-error *ngIf="email.invalid">required this field</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout='column' fxFlex='100%' formArrayName='newOrderArr'>
+            <div fxLayout='row' fxLayoutGap="10px" fxFlex='100%' *ngFor='let item of newOrderArr.controls; let i=index'
+                 [formGroupName]='i'>
+              <div fxFlex="22%">
+                <mat-form-field class="full-width">
+                  <mat-label>Select Category</mat-label>
+                  <mat-select formControlName="category" required>
+                    <mat-option *ngFor="let category of categories" [value]="category.value">
+                      {{category.viewValue}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="newOrderArr.controls[i].get('category').invalid">Please Select Category</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxFlex="22%">
+                <mat-form-field class="full-width">
+                  <mat-label>Select Item</mat-label>
+                  <input matInput formControlName="item" required>
+                  <mat-error *ngIf="newOrderArr.controls[i].get('item').invalid">required this field</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxFlex="22%">
+                <mat-form-field class="full-width">
+                  <input matInput formControlName="price" required>
+                  <span matPrefix>$&nbsp;</span>
+                  <mat-error *ngIf="newOrderArr.controls[i].get('price').invalid">required this field</mat-error>
+                </mat-form-field>
+              </div>
+              <div fxFlex="22%" fxLayoutAlign="end center" fxLayoutGap="10px">
+                  <mat-icon class="add" (click)='addTonewOrderArray()' *ngIf="newOrderArr.controls.length-1===i">add_circle</mat-icon>
+                  <mat-icon class="remove" (click)='removeFromArray(i)'>remove_circle</mat-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </mat-dialog-content>
+    <mat-dialog-actions fxLayoutAlign="center center">
+      <button mat-raised-button mat-dialog-close color="warn">Cancel</button>
+      <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial
+              color="primary" [mat-dialog-close]='newOrderForm.value' [disabled]="newOrderForm.invalid">Submit</button>
+    </mat-dialog-actions>
+  </div>
+</div>

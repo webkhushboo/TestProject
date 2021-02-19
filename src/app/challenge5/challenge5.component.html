@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <div fxFlex="70%" fxLayout="column" fxLayoutGap="2%">
+    <div fxLayout="row">
+      <div fxFlex="100%" fxLayoutAlign="center center">
+        <h1>The Playlists</h1>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%" fxLayoutAlign="center center">
+        <p>Here you can create your own playlist, edit your already existing playlist, add songs, and show it to the
+          world!</p>
+      </div>
+    </div>
+    <div fxLayout="row">
+      <div fxFlex="100%">
+        <button mat-raised-button color="primary" (click)="openDialog()">
+          <mat-icon>playlist_add</mat-icon>
+          <span> New Playlists</span>
+        </button>
+      </div>
+    </div>
+    <div fxLayout="row" *ngFor='let item of playlistArray'>
+      <div fxFlex="100%">
+        <app-playlist-card [playlist] = 'item' (editPlaylist) = 'editPlaylist($event)' (deletePlaylist) = 'deletePlaylist($event)'></app-playlist-card>
+      </div>
+    </div>
+  </div>
+</div>

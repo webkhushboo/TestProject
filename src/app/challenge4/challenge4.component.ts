@@ -1,13 +1,21 @@
+// Core module
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+/**
+ * Challenge4 component
+ */
 @Component({
   selector: 'app-challenge4',
   templateUrl: './challenge4.component.html',
   styleUrls: ['./challenge4.component.scss'],
 })
+
 export class Challenge4Component implements OnInit {
 
+  /**
+   * Array of cards
+   */
   cardArray = [
     { id: 1,
       header: 'Kokorowatari',
